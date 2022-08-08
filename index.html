@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final JavaScript</title>
+    <link
+        href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAFztUADBfjAAmejEACB4zABtjlgAMMVQAHXMoABJNGQApYIcAKHOoAAoxTQAaT3UACh8uADazRgAQRGkACBIcACdfhwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQsLDw8JCQkJCQkJAQkFDQANERERAQkBCgwJCQkJDQAAAA0REREJCgoJCQkJDQAAAAAADQ0PCgoKCgkNDQAAAAAAAAAADRAQEA0NAAAAAAAAAAAAAAAABgQAAAAAAAAAAAAAAAAAAAIEAAAAAAAAAAAABwAAAAAEBAAAAAAOAAAAAAcOAAAABAIAAAADDgAAAAAICAcAAAQCAAAOCA4AAAAAAAgIDgAEBgADAw4AAAAAAAAACAgHBwgDCA4AAAcACA4AAAAICAgICA4AAA4IAAAICA4HBwgICAcOBwcIAAAAAAgICAgIAAAICAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAwAMAAOAHAAD4HwAA/n8AAP5/AADeewAAznMAAMZjAADiRwAA8A0AADgZAACAAwAAwYcAAP//AAA="
+        rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body id="home">
+    <h1 class="title">
+        JavaScript
+    </h1>
+
+    <nav>
+        <div class="burger">
+            <div class="menu" onclick="changeIcon(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+        <div class="menuElements">
+            <ul class="first-ul">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#task">Užduotis</a></li>
+                <li><a href="#fadingDiv">Išnykstantis div</a></li>
+                <li><a href="#divProperties">Div savybės</a></li>
+                <li><a href="#randomColors">"Random" spalvos</a></li>
+                <li><a href="#form">Forma</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="card top" id="task">
+            <h2>Užduotis</h2>
+            <p>
+                1. Paspaudus ant mygtuko, puslapyje esantis div atsiranda/pranyksta. <br>
+                2. Turit vieną div, su aukščiu,pločiu ir spalva bei 4 mygtukus, su kuriais galit valdyt sukurto
+                div savybes: plotis, aukštis, centravimas ir pozicija.<br>
+                3. Burgeris ir šoninis Meniu - paspaudus ant burgerio gražiai išvažiuoja šoninis meniu.<br>
+                4. Bent 4 div elementai, pradžioje visi juodos spalvos, paspaudus bent ant vieno iš jų, yra
+                pakeičiamos spalvos visiems. Spalvos generuojamos random.<br>
+                5. Formoje pildoma "vardas", "pavardė" ir "gimimo data". Duomenys kaupiami lentelėje.
+                Stulpeliai: Eil. Nr., Vardas, Pavardė, Amžius.<br>
+                Visos užduotys turi būti stilizuotos, kad nebūtų sumaišytos. Kiekviena turi turėti savo section,
+                headingus ir pan.
+            </p>
+
+        </div>
+        <div class="card" id="fadingDiv">
+            <h2>Išnykstantis DIV</h2>
+            <div>
+                <div class="fading"></div>
+                <button class="ghost">Ghost</a>
+            </div>
+        </div>
+        <div class="card" id="divProperties">
+            <h2>DIV savybės</h2>
+            <div class="centered">
+                <div class="properties"></div>
+                <button onclick="width(0)">Width</button>
+                <button onclick="height(0)">Height</button>
+                <button onclick="colorDiv(0)">Color</button>
+                <button onclick="center(0)">Center</button>
+                <button onclick="position(0)">Position</button>
+            </div>
+        </div>
+        <div class="card" id="randomColors">
+            <h2>Random colors</h2>
+            <div>
+                <div class="box" ondblclick="coloredBoxes()"></div>
+                <div class="box" ondblclick="coloredBoxes()"></div>
+                <div class="box" ondblclick="coloredBoxes()"></div>
+                <div class="box" ondblclick="coloredBoxes()"></div>
+            </div>
+        </div>
+        <div class="card" id="form">
+            <h2>Forma</h2>
+            <div class="allCenter">
+                <form action="" id="tableForm">
+                    <table>
+
+                        <tr>
+                            <th><label for="name">Vardas </label></th>
+                            <td><input type="text" id="name"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="lname">Pavardė </label></th>
+                            <td><input type="text" id="lname"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="year">Gimimo metai </label></th>
+                            <td><input type="number" id="year"></td>
+                        </tr>
+
+                    </table>
+                    <button onclick="createTable()" id="submit">Išsaugoti</button>
+                    <button id="empty">Atnaujinti</button>
+                </form>
+
+                <table id="printedTable">
+                    <tr>
+                        <th>Eil.nr</th>
+                        <th>Vardas</th>
+                        <th>Pavardė</th>
+                        <th>Amžius</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
